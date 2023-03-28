@@ -5,10 +5,15 @@
     <title>Home page Django app</title>
 </head>
 <body>
-    <!-- templates/home.html -->
+<!--     templates/home.html -->
     {% extends 'base.html' %}
     {% block content %}
-    <h1>Homepage</h1>
+        <h1>Message board homepage</h1>
+        <ul>
+            {% for post in post_list %}
+            <li>{{ post.text }}</li>
+            {% endfor %}
+        </ul>
     {% endblock content %}
 </body>
 </html>
