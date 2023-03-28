@@ -1,5 +1,7 @@
 language: python
 python:
   - "3.8"
+install:
+  - pip install django
 script:
   - python3 manage.py runserver
